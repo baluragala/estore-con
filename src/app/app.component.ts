@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from "@angular/core";
+import { ProductItem } from "./product/product.interface";
 
 @Component({
   selector: "application-root",
@@ -47,5 +48,12 @@ export class AppComponent {
   handleClick(e) {
     console.log(e);
     alert("Clicked");
+  }
+
+  handleAddToCartEvent(item: ProductItem) {
+    console.log(
+      "AppComponent (parent) receieved event from ProductListItem(child)",
+      item
+    );
   }
 }

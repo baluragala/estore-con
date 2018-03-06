@@ -1,8 +1,9 @@
 <custom-header [mainTitle]="title" [subTitle]="tagline" [options]="headerOptions"></custom-header>
-<app-product-list-item [item]="product1"></app-product-list-item>
-<app-product-list-item [item]="product2"></app-product-list-item>
-<app-product-list-item [item]="product3"></app-product-list-item>
-<app-product-list-item [item]="product4"></app-product-list-item>
+<app-product-list-item [item]="product1" (addtocartevent)="handleAddToCartEvent($event)"></app-product-list-item>
+<app-product-list-item [item]="product2" (addtocartevent)="handleAddToCartEvent($event)"></app-product-list-item>
+<app-product-list-item [item]="product3" (addtocartevent)="handleAddToCartEvent($event)"></app-product-list-item>
+<app-product-list-item [item]="product4" (addtocartevent)="handleAddToCartEvent($event)"></app-product-list-item>
 <app-footer></app-footer>
+<button (click)="handleClick()"></button>
 
 <!-- {{product.metadata.weight1}} {{numbers}} {{ 1 * 8 + 16 / 2}} {{getTitle()}} -->

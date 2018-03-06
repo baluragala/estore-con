@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { ProductItem } from "../product.interface";
 
 @Component({
@@ -8,7 +8,14 @@ import { ProductItem } from "../product.interface";
 })
 export class ProductListItemComponent implements OnInit {
   @Input() item: ProductItem;
+
+  @Output() addtocartevent: EventEmitter<ProductItem> = new EventEmitter();
   constructor() {}
 
   ngOnInit() {}
+
+  handleAddToCartClick() {
+    //alert("Add to cart clicked : " + this.item.title);
+    this.addtocartevent.emit(this.item);
+  }
 }
