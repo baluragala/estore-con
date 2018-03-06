@@ -10,6 +10,13 @@ export class ProductListItemComponent implements OnInit {
   @Input() item: ProductItem;
 
   @Output() addtocartevent: EventEmitter<ProductItem> = new EventEmitter();
+
+  oosStyle = { color: "red" };
+  stockStyle = { color: "green" };
+
+  oosStyleString = "red";
+  stockStyleString = "green";
+
   constructor() {}
 
   ngOnInit() {}

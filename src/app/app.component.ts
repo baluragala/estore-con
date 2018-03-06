@@ -20,7 +20,7 @@ export class AppComponent {
   product2 = {
     title: "Nexus",
     price: 1500,
-    stock: 20,
+    stock: 0,
     description: "A phone by Apple"
   };
   product3 = {
@@ -35,6 +35,13 @@ export class AppComponent {
     stock: 20,
     description: "A phone by Apple"
   };
+
+  products: ProductItem[] = [
+    this.product1,
+    this.product2,
+    this.product3,
+    this.product4
+  ];
 
   headerOptions = {
     color: "red",

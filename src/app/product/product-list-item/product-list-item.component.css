@@ -4,3 +4,11 @@
   padding: 15px;
   margin: 2px;
 }
+
+.stock {
+  color: green;
+}
+
+.outofstock {
+  color: red;
+}
