@@ -2,10 +2,10 @@
   <!-- <h1 [ngStyle]="item.stock > 0 ? stockStyle : oosStyle">{{item.title}}
     <span>({{item.stock}})</span>
   </h1> -->
-  <h1 [ngClass]="{stock:item.stock,outofstock:!item.stock}">{{item.title}}
-    <span>({{item.stock}})</span>
+  <h1 [ngClass]="{stock:item.stock,'out-of-stock':!item.stock}">{{item.title | uppercase }}
+    <span>({{item.stock | stockmeasure:"no" }})</span>
   </h1>
-  <h3>{{item.price}}</h3>
+  <h3>{{item.price | currency:"GBP":false }}</h3>
   <p>{{item.description}}</p>
   <button *ngIf="item.stock > 0 else oos" (click)="handleAddToCartClick()">ADD TO CART</button>
   <ng-template #oos>

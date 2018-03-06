@@ -14,7 +14,7 @@ export class AppComponent {
   product1 = {
     title: "Iphone",
     price: 1500,
-    stock: 20,
+    stock: 2,
     description: "A phone by Apple"
   };
   product2 = {
