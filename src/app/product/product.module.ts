@@ -9,6 +9,8 @@ import { ReactiveOrderFormComponent } from "./reactive-order-form/reactive-order
 import { ProductListComponent } from "./product-list/product-list.component";
 import { RouterModule } from "@angular/router";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
+import { ProductService } from "./product.service";
+import { Productv2Service } from "./productv2.service";
 @NgModule({
   imports: [
     CommonModule,
@@ -37,6 +39,7 @@ import { ProductDetailComponent } from "./product-detail/product-detail.componen
     ManageProductReactiveComponent,
     ReactiveOrderFormComponent,
     ProductListComponent
-  ]
+  ],
+  providers: [{ provide: ProductService, useClass: Productv2Service }]
 })
 export class ProductModule {}
