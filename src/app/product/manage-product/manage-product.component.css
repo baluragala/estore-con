@@ -36,3 +36,11 @@ button {
   margin: 5px;
   min-width: 100px;
 }
+
+textarea.ng-invalid {
+  border: 2px solid red;
+}
+
+input.ng-invalid {
+  border: 2px solid red;
+}

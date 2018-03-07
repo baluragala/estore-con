@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: "app-manage-product",
@@ -11,6 +12,8 @@ export class ManageProductComponent implements OnInit {
   price;
   stock;
 
+  @ViewChild("refdescription") refdescription;
+
   constructor() {}
 
   ngOnInit() {}
@@ -18,5 +21,11 @@ export class ManageProductComponent implements OnInit {
   handleInput(e) {
     console.log(e.target.value);
     this.title = e.target.value;
+  }
+
+  handleSubmit(f: NgForm) {
+    //make api call
+    console.log(this.title, this.description, this.price, this.stock);
+    console.log(f.value);
   }
 }
