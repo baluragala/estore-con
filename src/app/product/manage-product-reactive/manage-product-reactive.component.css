@@ -37,10 +37,10 @@ button {
   min-width: 100px;
 }
 
-textarea.ng-invalid {
+/* textarea.ng-invalid {
   border: 2px solid red;
 }
 
 input.ng-invalid {
   border: 2px solid red;
-}
+} */
