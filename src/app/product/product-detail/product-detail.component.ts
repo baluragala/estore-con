@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: "app-product-detail",
@@ -8,10 +8,14 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class ProductDetailComponent implements OnInit {
   title;
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
-    this.title = this.route.snapshot.params.pname;
-    console.log(this.route.snapshot.queryParams);
+    this.route.paramMap.subscribe(p => (this.title = p.get("pname")));
+    this.route.queryParamMap.subscribe(p => console.log(p));
+  }
+
+  goToProducts() {
+    this.router.navigate(["/detail", "Iphone"]);
   }
 }
