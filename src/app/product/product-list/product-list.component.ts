@@ -41,4 +41,11 @@ export class ProductListComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  handleAddToCartEvent(item: ProductItem) {
+    console.log(
+      "ProductList (parent) receieved event from ProductListItem(child)",
+      item
+    );
+  }
 }

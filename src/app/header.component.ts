@@ -17,6 +17,13 @@ interface Options {
     <header>
         <h1 class="main-header" style="text-align:center">{{mainTitle}}</h1>
         <h3 style="text-align:center">{{subTitle}}</h3>
+        <nav>
+          <ul>
+            <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+          </ul>
+        </nav>
     </header>
   `,
   styles: [
@@ -30,7 +37,12 @@ interface Options {
       background-color:lightgrey;
       padding:10px;
     }
-  `
+  `,
+    `
+  .active {
+    color:red;
+    background-color:yellow;
+  }`
   ]
 })
 export class HeaderComponent {
