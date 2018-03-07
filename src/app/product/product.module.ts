@@ -7,14 +7,29 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ManageProductReactiveComponent } from "./manage-product-reactive/manage-product-reactive.component";
 import { ReactiveOrderFormComponent } from "./reactive-order-form/reactive-order-form.component";
 import { ProductListComponent } from "./product-list/product-list.component";
+import { RouterModule } from "@angular/router";
+import { ProductDetailComponent } from "./product-detail/product-detail.component";
 @NgModule({
-  imports: [CommonModule, SharedModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forChild([
+      {
+        path: "products",
+        component: ProductListComponent
+      },
+      { path: "detail/:pname", component: ProductDetailComponent }
+    ])
+  ],
   declarations: [
     ProductListItemComponent,
     ManageProductComponent,
     ManageProductReactiveComponent,
     ReactiveOrderFormComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductDetailComponent
   ],
   exports: [
     ProductListItemComponent,

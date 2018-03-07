@@ -10,13 +10,15 @@ import { ProductListItemComponent } from "./product/product-list-item/product-li
 import { HomeComponent } from "./home/home.component";
 import { ContactComponent } from "./contact/contact.component";
 import { ProductListComponent } from "./product/product-list/product-list.component";
+import { NotFoundComponent } from "./not-found/not-found.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -32,13 +34,13 @@ import { ProductListComponent } from "./product/product-list/product-list.compon
         component: ContactComponent
       },
       {
-        path: "products",
-        component: ProductListComponent
-      },
-      {
         path: "",
         redirectTo: "products",
         pathMatch: "full"
+      },
+      {
+        path: "**",
+        component: NotFoundComponent
       }
     ])
   ],
