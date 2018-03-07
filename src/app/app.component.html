@@ -1,8 +1,9 @@
 <custom-header [mainTitle]="title" [subTitle]="tagline" [options]="headerOptions"></custom-header>
-<app-product-list-item *ngFor="let product of products" [item]="product" (addtocartevent)="handleAddToCartEvent($event)">
-</app-product-list-item>
 
+<!-- <app-product-list-item *ngFor="let product of products" [item]="product" (addtocartevent)="handleAddToCartEvent($event)">
+</app-product-list-item> -->
+<app-manage-product></app-manage-product>
 <app-footer></app-footer>
-<button (click)="handleClick()"></button>
+
 
 <!-- {{product.metadata.weight1}} {{numbers}} {{ 1 * 8 + 16 / 2}} {{getTitle()}} -->
