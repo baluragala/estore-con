@@ -1,6 +1,6 @@
 <div class="product-form">
 
-  <table border="1">
+  <!-- <table border="1">
     <tr>
       <td>valid</td>
       <td>invalid</td>
@@ -17,14 +17,14 @@
       <td>{{productForm.controls.title.touched}}</td>
       <td>{{productForm.controls.title.untouched}}</td>
     </tr>
-  </table>
+  </table> -->
 
   <form (submit)="handleSubmit()" [formGroup]="productForm">
     <div class="form-group">
       <label for="title">Title</label>
       <input type="text" placeholder="title" formControlName="title" />
     </div>
-    <p *ngIf="productForm.controls.title.dirty && productForm.controls.title.errors.required">Title is required</p>
+    <p *ngIf="productForm.controls.title.dirty && productForm.controls.title.errors?.required">Title is required</p>
     <div class="form-group">
       <label for="title">Description</label>
       <textarea rows="5" cols="60" placeholder="description" formControlName="description"></textarea>
@@ -40,8 +40,7 @@
     <div class="form-group">
       <label>&nbsp;</label>
       <button type="submit">Save</button>
-      <button>Cancel</button>
-
+      <button (click)="load()">Load</button>
     </div>
   </form>
 </div>

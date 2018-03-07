@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { StockPipe } from "../../shared/stock.pipe";
 
 @Component({
   selector: "app-manage-product-reactive",
@@ -22,4 +23,14 @@ export class ManageProductReactiveComponent implements OnInit {
       stock: new FormControl(1, [Validators.min(1), Validators.max(999)])
     });
   }
+
+  load() {
+    this.productForm.patchValue({
+      title: "iphone",
+      price: 1200,
+      stock: 120
+    });
+  }
+
+  handleSubmit() {}
 }
