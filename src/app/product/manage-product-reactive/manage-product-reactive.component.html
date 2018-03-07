@@ -1,0 +1,47 @@
+<div class="product-form">
+
+  <table border="1">
+    <tr>
+      <td>valid</td>
+      <td>invalid</td>
+      <td>dirty</td>
+      <td>pristine</td>
+      <td>touched</td>
+      <td>untouched</td>
+    </tr>
+    <tr>
+      <td>{{productForm.controls.title.valid}}</td>
+      <td>{{productForm.controls.title.invalid}}</td>
+      <td>{{productForm.controls.title.dirty}}</td>
+      <td>{{productForm.controls.title.pristine}}</td>
+      <td>{{productForm.controls.title.touched}}</td>
+      <td>{{productForm.controls.title.untouched}}</td>
+    </tr>
+  </table>
+
+  <form (submit)="handleSubmit()" [formGroup]="productForm">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" placeholder="title" formControlName="title" />
+    </div>
+    {{productForm.controls.description.errors | json }}
+    <div class="form-group">
+      <label for="title">Description</label>
+      <textarea rows="5" cols="60" placeholder="description" formControlName="description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" placeholder="price" formControlName="price" />
+    </div>
+    <div class="form-group">
+      <label for="stock">Stock</label>
+      <input type="number" placeholder="stock" formControlName="stock" />
+    </div>
+    <div class="form-group">
+      <label>&nbsp;</label>
+      <button type="submit">Save</button>
+      <button>Cancel</button>
+
+    </div>
+  </form>
+</div>
