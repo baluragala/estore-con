@@ -19,7 +19,7 @@
     </tr>
   </table>
 
-  <form (submit)="handleSubmit()">
+  <form (submit)="handleSubmit()" [formGroup]="productForm">
     <div class="form-group">
       <label for="title">Title</label>
       <input type="text" placeholder="title" formControlName="title" />
