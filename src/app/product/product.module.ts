@@ -11,6 +11,8 @@ import { RouterModule } from "@angular/router";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
 import { ProductService } from "./product.service";
 import { Productv2Service } from "./productv2.service";
+import { environment } from "../../environments/environment";
+
 @NgModule({
   imports: [
     CommonModule,
@@ -40,6 +42,20 @@ import { Productv2Service } from "./productv2.service";
     ReactiveOrderFormComponent,
     ProductListComponent
   ],
-  providers: [{ provide: ProductService, useClass: Productv2Service }]
+  providers: [
+    // { provide: ProductService, useClass: Productv2Service },
+    { provide: "API_TOKEN", useValue: "ws23%^^dhetge(*&t" },
+    { provide: "CLIENT_ID", useValue: "CLNT12ded56g34" },
+    {
+      provide: ProductService,
+      useFactory: function() {
+        if (environment.production) {
+          return new Productv2Service();
+        } else {
+          return new ProductService();
+        }
+      }
+    }
+  ]
 })
 export class ProductModule {}

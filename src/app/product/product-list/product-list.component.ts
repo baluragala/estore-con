@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Inject } from "@angular/core";
 import { ProductItem } from "../product.interface";
 import { ProductService } from "../product.service";
 
@@ -10,8 +10,11 @@ import { ProductService } from "../product.service";
 export class ProductListComponent implements OnInit {
   products: ProductItem[];
 
-  constructor(private service: ProductService) {
-    console.log(service);
+  constructor(
+    private service: ProductService,
+    @Inject("CLIENT_ID") private apiKey: string
+  ) {
+    console.log(service, apiKey);
   }
 
   ngOnInit() {

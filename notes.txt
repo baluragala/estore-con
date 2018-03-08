@@ -1,0 +1,14 @@
+3 types
+    1- class based
+    2- value based
+    3- factory based
+
+simple TS 
+
+ng generate service [module]/service name
+
+module / providers [
+    ClassName
+    {provide:'', useClass/useValue/useFactory}
+
+]
