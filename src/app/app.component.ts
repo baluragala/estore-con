@@ -1,11 +1,14 @@
 import { Component, ViewEncapsulation } from "@angular/core";
 import { ProductItem } from "./product/product.interface";
+import { ProductService } from "./product/product.service";
+import { Productv2Service } from "./product/productv2.service";
 
 @Component({
   selector: "application-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  providers: [{ provide: ProductService, useClass: Productv2Service }]
 })
 export class AppComponent {
   title = "angular";
