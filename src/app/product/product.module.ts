@@ -12,6 +12,7 @@ import { ProductDetailComponent } from "./product-detail/product-detail.componen
 import { ProductService } from "./product.service";
 import { Productv2Service } from "./productv2.service";
 import { environment } from "../../environments/environment";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { environment } from "../../environments/environment";
         component: ProductListComponent
       },
       { path: "detail/:pname", component: ProductDetailComponent }
-    ])
+    ]),
+    HttpClientModule
   ],
   declarations: [
     ProductListItemComponent,
@@ -43,19 +45,19 @@ import { environment } from "../../environments/environment";
     ProductListComponent
   ],
   providers: [
-    // { provide: ProductService, useClass: Productv2Service },
+    { provide: ProductService, useClass: ProductService },
     { provide: "API_TOKEN", useValue: "ws23%^^dhetge(*&t" },
-    { provide: "CLIENT_ID", useValue: "CLNT12ded56g34" },
-    {
-      provide: ProductService,
-      useFactory: function() {
-        if (environment.production) {
-          return new Productv2Service();
-        } else {
-          return new ProductService();
-        }
-      }
-    }
+    { provide: "CLIENT_ID", useValue: "CLNT12ded56g34" }
+    // {
+    //   provide: ProductService,
+    //   useFactory: function() {
+    //     if (environment.production) {
+    //       return new Productv2Service();
+    //     } else {
+    //       return new ProductService();
+    //     }
+    //   }
+    // }
   ]
 })
 export class ProductModule {}

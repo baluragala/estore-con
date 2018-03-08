@@ -1,6 +1,6 @@
 export interface ProductItem {
-  title: string;
-  price: number;
-  stock: number;
-  description: string;
+  id?: number;
+  productName?: string;
+  price?: string;
+  InTheBox?: string;
 }

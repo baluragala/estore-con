@@ -12,3 +12,37 @@ module / providers [
     {provide:'', useClass/useValue/useFactory}
 
 ]
+
+
+
+var a=10,b=20;
+
+var c = a + b;
+
+c // 30
+
+a = 50;
+
+c ?
+
+
+RxJS
+-----
+Observable -> a collection generates data
+Observer -> responds to changes
+Subscription -> reference 
+Subject -> 
+Scheduler -> 
+
+
+pull / push
+
+
+json-server setup
+----------------
+npm install -g json-server
+
+to start server:
+---------------
+json-server --watch db.json
+

@@ -6,8 +6,7 @@ import { Productv2Service } from "../productv2.service";
 @Component({
   selector: "app-product-list",
   templateUrl: "./product-list.component.html",
-  styleUrls: ["./product-list.component.css"],
-  providers: [{ provide: ProductService, useClass: Productv2Service }]
+  styleUrls: ["./product-list.component.css"]
 })
 export class ProductListComponent implements OnInit {
   products: ProductItem[];
@@ -21,7 +20,9 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     //this.service = new ProductService();
-    this.products = this.service.getProducts();
+    this.service
+      .getProducts()
+      .subscribe(products => (this.products = products));
   }
 
   handleAddToCartEvent(item: ProductItem) {

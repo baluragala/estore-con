@@ -3,12 +3,11 @@
     <span>({{item.stock}})</span>
   </h1> -->
   <h1 [ngClass]="{stock:item.stock,'out-of-stock':!item.stock}">
-    <a [routerLink]="['/detail',item.title]">{{item.title | uppercase }}
-      <span>({{item.stock | stockmeasure:"no" }})</span>
+    <a [routerLink]="['/detail',item.productName]">{{item.productName | uppercase }}
     </a>
   </h1>
   <h3>{{item.price | currency:"GBP":false }}</h3>
-  <p>{{item.description}}</p>
+  <p>{{item.InTheBox}}</p>
   <button *ngIf="item.stock > 0 else oos" (click)="handleAddToCartClick()">ADD TO CART</button>
   <ng-template #oos>
     <h3>OUT OF STOCK</h3>
