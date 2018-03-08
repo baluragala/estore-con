@@ -12,7 +12,10 @@ export class ProductService implements IProductService {
   }
 
   getProducts() {
-    return this.http.get<ProductItem[]>("http://localhost:3000/products");
+    return this.http.get<ProductItem[]>("http://localhost:3000/products", {
+      headers: { "X-App-Id": "1234" },
+      params: { page: "1", limit: "10" }
+    });
   }
 
   addProduct(product: ProductItem): Observable<ProductItem> {

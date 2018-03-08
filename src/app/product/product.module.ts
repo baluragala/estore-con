@@ -13,6 +13,8 @@ import { ProductService } from "./product.service";
 import { Productv2Service } from "./productv2.service";
 import { environment } from "../../environments/environment";
 import { HttpClientModule } from "@angular/common/http";
+import { AuthGuard } from "./auth.guard";
+import { InworkGuard } from "./inwork.guard";
 
 @NgModule({
   imports: [
@@ -27,11 +29,15 @@ import { HttpClientModule } from "@angular/common/http";
       },
       {
         path: "products/manage",
-        component: ManageProductReactiveComponent
+        component: ManageProductReactiveComponent,
+        canActivate: [AuthGuard],
+        canDeactivate: [InworkGuard]
       },
       {
         path: "products/manage/:id",
-        component: ManageProductReactiveComponent
+        component: ManageProductReactiveComponent,
+        canActivate: [AuthGuard],
+        canDeactivate: [InworkGuard]
       },
       { path: "detail/:pname", component: ProductDetailComponent }
     ]),
@@ -53,6 +59,8 @@ import { HttpClientModule } from "@angular/common/http";
     ProductListComponent
   ],
   providers: [
+    AuthGuard,
+    InworkGuard,
     { provide: ProductService, useClass: ProductService },
     { provide: "API_TOKEN", useValue: "ws23%^^dhetge(*&t" },
     { provide: "CLIENT_ID", useValue: "CLNT12ded56g34" }
