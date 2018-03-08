@@ -21,4 +21,8 @@ export class ProductService implements IProductService {
       product
     );
   }
+
+  getProduct(id: string): Observable<ProductItem> {
+    return this.http.get<ProductItem>("http://localhost:3000/products/" + id);
+  }
 }

@@ -21,7 +21,7 @@ interface Options {
           <ul>
             <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
             <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
-            <li><a routerLink="/products/add" routerLinkActive="active">Add Product</a></li>
+            <li><a routerLink="/products/manage" routerLinkActive="active">Add Product</a></li>
             <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
           </ul>
         </nav>

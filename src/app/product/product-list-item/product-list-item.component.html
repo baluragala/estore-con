@@ -5,6 +5,7 @@
   <h1 [ngClass]="{stock:item.stock,'out-of-stock':!item.stock}">
     <a [routerLink]="['/detail',item.productName]">{{item.productName | uppercase }}
     </a>
+    <a [routerLink]="['/products/manage']" [queryParams]="{id:item.id}">EDIT</a>
   </h1>
   <h3>{{item.price | currency:"GBP":false }}</h3>
   <p>{{item.InTheBox}}</p>

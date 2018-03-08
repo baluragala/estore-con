@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { StockPipe } from "../../shared/stock.pipe";
 import { ProductService } from "../product.service";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-manage-product-reactive",
@@ -11,7 +11,12 @@ import { Router } from "@angular/router";
 })
 export class ManageProductReactiveComponent implements OnInit {
   productForm: FormGroup;
-  constructor(private service: ProductService, private router: Router) {}
+  isEdit: boolean = false;
+  constructor(
+    private service: ProductService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.productForm = new FormGroup({
@@ -24,6 +29,19 @@ export class ManageProductReactiveComponent implements OnInit {
       price: new FormControl(0, [Validators.min(0), Validators.max(9999)]),
       stock: new FormControl(1, [Validators.min(1), Validators.max(999)])
     });
+
+    if (this.route.snapshot.queryParams["id"]) {
+      this.service
+        .getProduct(this.route.snapshot.queryParams["id"])
+        .subscribe(product => {
+          this.productForm.patchValue({
+            title: product.productName,
+            description: product.InTheBox,
+            price: product.price,
+            stock: 1
+          });
+        });
+    }
   }
 
   load() {
