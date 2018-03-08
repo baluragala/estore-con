@@ -30,9 +30,9 @@ export class ManageProductReactiveComponent implements OnInit {
       stock: new FormControl(1, [Validators.min(1), Validators.max(999)])
     });
 
-    if (this.route.snapshot.queryParams["id"]) {
+    if (this.route.snapshot.params["id"]) {
       this.service
-        .getProduct(this.route.snapshot.queryParams["id"])
+        .getProduct(this.route.snapshot.params["id"])
         .subscribe(product => {
           this.productForm.patchValue({
             title: product.productName,

@@ -29,6 +29,10 @@ import { HttpClientModule } from "@angular/common/http";
         path: "products/manage",
         component: ManageProductReactiveComponent
       },
+      {
+        path: "products/manage/:id",
+        component: ManageProductReactiveComponent
+      },
       { path: "detail/:pname", component: ProductDetailComponent }
     ]),
     HttpClientModule
