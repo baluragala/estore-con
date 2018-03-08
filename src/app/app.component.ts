@@ -85,6 +85,7 @@ export class AppComponent {
     //   .filter(d => d % 5 == 0)
     //   .subscribe(d => console.log(d));
 
+    Observable.from([1, 2, 3, 4, 5]).subscribe(d => console.log(d));
     Observable.range(0, 20)
       .map(d => d + 1)
       .filter(d => d % 5 == 0)

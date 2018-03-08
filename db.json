@@ -4,8 +4,7 @@
       "id": "1",
       "productName": "mobile",
       "price": "5999",
-      "InTheBox":
-        "Handset, Battery, Charger, User Manual, Headset, Screen Guard",
+      "InTheBox": "Handset, Battery, Charger, User Manual, Headset, Screen Guard",
       "modelNumber": "ERA-2V",
       "size": "5 inch",
       "brand": "Lenova",
@@ -17,8 +16,7 @@
       "id": "2",
       "productName": "Air conditioner",
       "price": "23999",
-      "InTheBox":
-        "1 Indoor Unit 1 Outdoor Unit Remote Control 2 Batteries Connecting Pipes User Manual Warranty Card",
+      "InTheBox": "1 Indoor Unit 1 Outdoor Unit Remote Control 2 Batteries Connecting Pipes User Manual Warranty Card",
       "modelNumber": "ERA-2V",
       "size": "5 inch",
       "brand": "Carrier",
@@ -65,8 +63,7 @@
       "id": "6",
       "productName": "MacBook",
       "price": "113999",
-      "InTheBox":
-        "Laptop, Battery, Power Adaptor, User Guide, Warranty Documents",
+      "InTheBox": "Laptop, Battery, Power Adaptor, User Guide, Warranty Documents",
       "modelNumber": "MQD32HN/A A1466",
       "size": "15.5 inch",
       "brand": "Apple",
@@ -78,8 +75,7 @@
       "id": "7",
       "productName": "MacBook",
       "price": "113999",
-      "InTheBox":
-        "Laptop, Battery, Power Adaptor, User Guide, Warranty Documents",
+      "InTheBox": "Laptop, Battery, Power Adaptor, User Guide, Warranty Documents",
       "modelNumber": "MQD32HN/A A1466",
       "size": "15.5 inch",
       "brand": "Apple",
@@ -91,8 +87,7 @@
       "id": "8",
       "productName": "washing machine",
       "price": "113999",
-      "InTheBox":
-        "User Manual Outlet Pipe 1 Washing Machine Inlet Pipe Lint Filter Rat Mesh",
+      "InTheBox": "User Manual Outlet Pipe 1 Washing Machine Inlet Pipe Lint Filter Rat Mesh",
       "modelNumber": "MQD466",
       "size": "6 kg",
       "brand": "Haier",
@@ -103,8 +98,7 @@
       "id": "9",
       "productName": "Printer",
       "price": "10999",
-      "InTheBox":
-        "Laptop, Battery, Power Adaptor, User Guide, Warranty Documents",
+      "InTheBox": "Laptop, Battery, Power Adaptor, User Guide, Warranty Documents",
       "modelNumber": "MQD466",
       "size": "6 kg",
       "brand": "Haier",
@@ -115,8 +109,7 @@
       "id": "10",
       "productName": "Camera",
       "price": "99999",
-      "InTheBox":
-        "EN-EL14a rechargeable Li-ion battery (with terminal cover), MH-24 battery charger (plug adapter supplied in countries or regions where required; shape depends on country of sale), DK-25 rubber eyecup, BF-1B body cap, AN-DC3 strap",
+      "InTheBox": "EN-EL14a rechargeable Li-ion battery (with terminal cover), MH-24 battery charger (plug adapter supplied in countries or regions where required; shape depends on country of sale), DK-25 rubber eyecup, BF-1B body cap, AN-DC3 strap",
       "size": "23.5 x 15.6 mm",
       "brand": "Nikon",
       "color": "Black",
@@ -146,8 +139,7 @@
       "id": "13",
       "productName": "MacBook",
       "price": "125349",
-      "InTheBox":
-        "Laptop, Battery, Power Adaptor, User Guide, Warranty Documents",
+      "InTheBox": "Laptop, Battery, Power Adaptor, User Guide, Warranty Documents",
       "size": "13.3 inch",
       "brand": "Apple",
       "color": "Gold",
@@ -157,8 +149,7 @@
       "id": "14",
       "productName": "Power-bank",
       "price": "11049",
-      "InTheBox":
-        "Laptop, Battery, Power Adaptor, User Guide, Warranty Documents",
+      "InTheBox": "Laptop, Battery, Power Adaptor, User Guide, Warranty Documents",
       "size": "3inches",
       "brand": "Intex",
       "color": "gray",
@@ -168,8 +159,7 @@
       "id": "15",
       "productName": "Wrist-Watch",
       "price": "1789",
-      "InTheBox":
-        "Laptop, Battery, Power Adaptor, User Guide, Warranty Documents",
+      "InTheBox": "Laptop, Battery, Power Adaptor, User Guide, Warranty Documents",
       "size": "4inches",
       "brand": "samsung",
       "color": "lightgray",
@@ -179,8 +169,7 @@
       "id": "16",
       "productName": "Air conditioner",
       "price": "122789",
-      "InTheBox":
-        "1 Indoor Unit 1 Outdoor Unit Remote Control 2 Batteries Connecting Pipes User Manual Warranty Card Power Adaptor, User Guide, Warranty Documents",
+      "InTheBox": "1 Indoor Unit 1 Outdoor Unit Remote Control 2 Batteries Connecting Pipes User Manual Warranty Card Power Adaptor, User Guide, Warranty Documents",
       "size": "70 inches",
       "brand": "sony",
       "color": "lightgray",
@@ -191,8 +180,7 @@
       "id": "17",
       "productName": "Mobile",
       "price": "5785",
-      "InTheBox":
-        "Handset, Charger, Type C USB Cable,White Earphone, User Manual Warranty Card Power Adaptor, User Guide",
+      "InTheBox": "Handset, Charger, Type C USB Cable,White Earphone, User Manual Warranty Card Power Adaptor, User Guide",
       "size": "5.1cm",
       "brand": "sony",
       "color": "gold",
@@ -203,8 +191,7 @@
       "id": "18",
       "productName": "Mobile",
       "price": "11458",
-      "InTheBox":
-        "Handset, Lightening Charger, Quick Start Guide, Data Cable, Headphone",
+      "InTheBox": "Handset, Lightening Charger, Quick Start Guide, Data Cable, Headphone",
       "size": "5.5cm",
       "brand": "redmi",
       "color": "silver",
@@ -230,6 +217,24 @@
       "brand": "HP",
       "color": "black",
       "touchScreen": "No"
+    },
+    {
+      "productName": "Dell XPS",
+      "InTheBox": "Latop, charger, accessories",
+      "price": 1400,
+      "id": "3obbNjB"
+    },
+    {
+      "productName": "Dell Alienware",
+      "InTheBox": "Laptop, charger",
+      "price": 2000,
+      "id": "TNb_P7J"
+    },
+    {
+      "productName": "dasfdsaadf",
+      "InTheBox": "sdfafasdfs f fadsfasdf sdfs fa ssdaf",
+      "price": 2344,
+      "id": "PM~opQG"
     }
   ],
   "users": [],

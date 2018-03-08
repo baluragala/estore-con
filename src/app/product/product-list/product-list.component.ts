@@ -22,7 +22,10 @@ export class ProductListComponent implements OnInit {
     //this.service = new ProductService();
     this.service
       .getProducts()
-      .subscribe(products => (this.products = products));
+      .subscribe(
+        products => (this.products = products),
+        err => alert("something went wrong")
+      );
   }
 
   handleAddToCartEvent(item: ProductItem) {

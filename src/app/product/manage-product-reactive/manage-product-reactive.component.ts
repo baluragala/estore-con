@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { StockPipe } from "../../shared/stock.pipe";
+import { ProductService } from "../product.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-manage-product-reactive",
@@ -9,7 +11,7 @@ import { StockPipe } from "../../shared/stock.pipe";
 })
 export class ManageProductReactiveComponent implements OnInit {
   productForm: FormGroup;
-  constructor() {}
+  constructor(private service: ProductService, private router: Router) {}
 
   ngOnInit() {
     this.productForm = new FormGroup({
@@ -32,5 +34,21 @@ export class ManageProductReactiveComponent implements OnInit {
     });
   }
 
-  handleSubmit() {}
+  handleSubmit() {
+    this.service
+      .addProduct({
+        productName: this.productForm.value.title,
+        InTheBox: this.productForm.value.description,
+        price: this.productForm.value.price
+      })
+      .subscribe(
+        p => {
+          alert("Product Saved Successfully");
+        },
+        err => alert("Something went wrong"),
+        () => {
+          this.router.navigate(["/products"]);
+        }
+      );
+  }
 }
