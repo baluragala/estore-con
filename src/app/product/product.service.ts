@@ -6,6 +6,7 @@ import { Observable } from "rxjs/Rx";
 
 @Injectable()
 export class ProductService implements IProductService {
+  private dirtyForm: boolean = false;
   private http: HttpClient;
   constructor(http: HttpClient) {
     this.http = http;
@@ -27,5 +28,12 @@ export class ProductService implements IProductService {
 
   getProduct(id: string): Observable<ProductItem> {
     return this.http.get<ProductItem>("http://localhost:3000/products/" + id);
+  }
+
+  setFormDirty(flag: boolean) {
+    this.dirtyForm = flag;
+  }
+  isFormDirty() {
+    return this.dirtyForm;
   }
 }

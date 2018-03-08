@@ -30,6 +30,10 @@ export class ManageProductReactiveComponent implements OnInit {
       stock: new FormControl(1, [Validators.min(1), Validators.max(999)])
     });
 
+    this.productForm.valueChanges.subscribe(d =>
+      this.service.setFormDirty(true)
+    );
+
     if (this.route.snapshot.params["id"]) {
       this.service
         .getProduct(this.route.snapshot.params["id"])
@@ -62,6 +66,7 @@ export class ManageProductReactiveComponent implements OnInit {
       .subscribe(
         p => {
           alert("Product Saved Successfully");
+          this.service.setFormDirty(false);
         },
         err => alert("Something went wrong"),
         () => {
